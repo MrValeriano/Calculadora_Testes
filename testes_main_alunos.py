@@ -91,7 +91,7 @@ class TestCalculadora(unittest.TestCase):
         self.assertEqual(calculadora_v3(-8, 2, '/'), -4)
         self.assertEqual(calculadora_v3(5, -10, '-'), 15)
         self.assertEqual(calculadora_v4(-21, -3, '/'), 7)
-        self.assertEqual(calculadora_v4(-7, 2, '-'), 9)
+        self.assertEqual(calculadora_v4(-7, 2, '-'), -9)
         self.assertEqual(calculadora_v4(5, -5, '*'), -25)
 
         # Teste números negativos com divisão e módulo, testar para todas as versões
@@ -111,7 +111,10 @@ class TestCalculadora(unittest.TestCase):
         self.assertEqual(calculadora_v4(-2, 3, '^'), -8)
 
         # Teste números negativos com exponenciação de zero, testar para todas as versões
-        self.assertEqual(calculadora(0, 3, '^'), 0)
+        self.assertEqual(calculadora(-7, 0, '^'), 1)
+        self.assertEqual(calculadora_v2(-7, 0, '^'), 1)
+        self.assertEqual(calculadora_v3(-7, 0, '^'), 1)
+        self.assertEqual(calculadora_v4(-7, 0, '^'), 1)
 
 
 if __name__ == '__main__':
