@@ -8,18 +8,38 @@ class TestCalculadora(unittest.TestCase):
     def teste_operacoes_basicas(self):
         # Teste operações básicas de cada operador + - * / % ^
         self.assertEqual(calculadora(2, 3, '+'), 5)
+        self.assertEqual(calculadora(6, 3, '-'), 3)
+        self.assertEqual(calculadora(3, 7, '*'), 21)
+        self.assertEqual(calculadora(9, 3, '/'), 3)
+        self.assertEqual(calculadora(7, 4, '%'), 3)
+        self.assertEqual(calculadora(5, 3, '^'), 125)
 
     def teste_v2_operacoes(self):
         # Teste operações básicas de cada operador + - * / % ^
         self.assertEqual(calculadora_v2(2, 3, '+'), 5)
+        self.assertEqual(calculadora_v2(6, 3, '-'), 3)
+        self.assertEqual(calculadora_v2(3, 7, '*'), 21)
+        self.assertEqual(calculadora_v2(9, 3, '/'), 3)
+        self.assertEqual(calculadora_v2(7, 4, '%'), 3)
+        self.assertEqual(calculadora_v2(5, 3, '^'), 125)
 
     def teste_v3_operacoes(self):
         # Teste operações básicas de cada operador + - * / % ^
         self.assertEqual(calculadora_v3(2, 3, '+'), 5)
+        self.assertEqual(calculadora_v3(6, 3, '-'), 3)
+        self.assertEqual(calculadora_v3(3, 7, '*'), 21)
+        self.assertEqual(calculadora_v3(9, 3, '/'), 3)
+        self.assertEqual(calculadora_v3(7, 4, '%'), 3)
+        self.assertEqual(calculadora_v3(5, 3, '^'), 125)
 
     def teste_v4_operacoes(self):
         # Teste operações básicas de cada operador + - * / % ^
         self.assertEqual(calculadora_v4(2, 3, '+'), 5)
+        self.assertEqual(calculadora_v4(6, 3, '-'), 3)
+        self.assertEqual(calculadora_v4(3, 7, '*'), 21)
+        self.assertEqual(calculadora_v4(9, 3, '/'), 3)
+        self.assertEqual(calculadora_v4(7, 4, '%'), 3)
+        self.assertEqual(calculadora_v4(5, 3, '^'), 125)
 
     def teste_operacoes_diversas(self):
         # Teste divisão por zero operador para todas versões / %
