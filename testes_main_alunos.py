@@ -45,11 +45,26 @@ class TestCalculadora(unittest.TestCase):
         # Teste divisão por zero operador para todas versões / %
         self.assertTrue(math.isnan(calculadora(5, 0, '/')))
         self.assertTrue(math.isnan(calculadora(5, 0, '%')))
+        self.assertTrue(math.isnan(calculadora_v2(3, 0, '/')))
+        self.assertTrue(math.isnan(calculadora_v2(3, 0, '%')))
+        self.assertTrue(math.isnan(calculadora_v3(7, 0, '/')))
+        self.assertTrue(math.isnan(calculadora_v3(7, 0, '%')))
+        self.assertTrue(math.isnan(calculadora_v4(1, 0, '/')))
+        self.assertTrue(math.isnan(calculadora_v4(1, 0, '%')))
 
         # Teste operador inválido - fazer três testes para todas as versões
         self.assertTrue(math.isnan(calculadora(2, 3, '$')))
         self.assertTrue(math.isnan(calculadora(2, 5, '#')))
         self.assertTrue(math.isnan(calculadora(0, 2, 'qwe')))
+        self.assertTrue(math.isnan(calculadora_v2(2, 3, 'º')))
+        self.assertTrue(math.isnan(calculadora_v2(2, 5, '~')))
+        self.assertTrue(math.isnan(calculadora_v2(0, 2, 'abab')))
+        self.assertTrue(math.isnan(calculadora_v3(2, 3, '?')))
+        self.assertTrue(math.isnan(calculadora_v3(2, 5, '&')))
+        self.assertTrue(math.isnan(calculadora_v3(0, 2, 'D')))
+        self.assertTrue(math.isnan(calculadora_v4(2, 3, '_')))
+        self.assertTrue(math.isnan(calculadora_v4(2, 5, '!')))
+        self.assertTrue(math.isnan(calculadora_v4(0, 2, 'pt')))
 
         # Teste números de virgula flutuante - fazer três testes para todas as versões
         self.assertAlmostEqual(calculadora(2.5, 1.5, '+'), 4.0)
